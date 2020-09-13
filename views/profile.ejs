@@ -1,0 +1,56 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/messages.ejs') %>
+
+
+<!-- <h1></h1>
+
+<p>You found me!</p>
+
+<img src="https://img.freepik.com/free-photo/lord-ganesha-ganesha-festival_54391-1121.jpg?size=626&ext=jpg" width="250" height="auto" alt="secret photo">
+<div>
+	<h2>
+		Profile details
+	</h2>
+	<ul>
+		<li>Username : <%- currentUser.username %></li>
+		<li>Full name : <%- currentUser.name %></li>
+		<% currentUser.fav_products.forEach(function(data){%>
+
+			<li>fav : <%- typeof data.product_name!='undefined'?data.product_name:'undefined'%></li>
+			<li>fav : <%- typeof data.price!='undefined'?data.price:'undefined'%></li>
+			<li>fav : <%- typeof data.link!='undefined'?data.link:'undefined'%></li>
+			<li>fav : <%- typeof data.links!='undefined'?data.links:'undefined'%></li>
+	<%	}) %>
+	</ul>
+</div> --> 
+<div style="margin-left:24%;width: 50%;padding: 10px;" >
+	<!-- <span class="border border-primary"></span> -->
+	<% if(currentUser.fav_products.length==0||currentUser.fav_products[0]=='undefined'){ %>
+		<div style="margin-bottom: 25%;margin-top:12%;margin-left:25%;height:50%;width:50%;">
+		<h2 style="text-align: center;font-family: 'Permanent Marker';margin-bottom: 25%;font-size:100px">Cart is empty</h2>
+		<i style="margin-left:25%;" class="fas fa-cart-arrow-down fa-10x"></i>
+	</div>
+<%	} else { %> 
+	<h1 style="text-align: center;font-family: 'Permanent Marker'"><u>Favourite Products</u></h1>
+	
+			<% currentUser.fav_products.forEach(function(data){%>
+				<div style="margin:2rem;" class="rounded">
+				<div class="card" style="width: 44rem;">
+				  <img class="card-img-top" src="<%- typeof data.site!='undefined'?data.site:'undefined' %>" alt="Card image cap" style="height: 40%;width:40%;margin-left:27%;">
+				  <div class="card-body" style="font-family: 'Montserrat', sans-serif;">
+			<li>Product Name : <%- typeof data.product_name!='undefined'?data.product_name:'undefined'%></li>
+			<li>Price : <%- typeof data.price!='undefined'?data.price:'undefined'%></li>
+			<li>Link to product : <a href="<%- typeof data.link!='undefined'?data.link:'undefined'%>" target="_blank">link</a></li>
+			<li>Related products : <a href="<%- typeof data.links!='undefined'?data.links:'undefined'%>"  target="_blank">link</a></li>
+		  
+		</div>
+				</div>
+			</div>
+		<%	}) %>
+		<% }  %> 
+	<!-- </span>	 -->
+</div>
+<style>
+
+</style>
+<%- include('partials/footer.ejs') %>

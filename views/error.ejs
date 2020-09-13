@@ -1,0 +1,48 @@
+
+<%- include('partials/header.ejs')%>
+<%- include('partials/messages.ejs')%>
+<style>
+    .error-404 {
+  margin: 0 auto;
+  text-align: center;
+}
+.error-404 .error-code {
+  bottom: 60%;
+  color: #4686CC;
+  font-size: 60px;
+  line-height: 100px;
+  font-weight: bold;
+}
+.error-404 .error-desc {
+  font-size: 40px;
+  color: #647788;
+}
+.error-404 .m-b-10 {
+  margin-bottom: 10px!important;
+}
+.error-404 .m-b-20 {
+  margin-bottom: 20px!important;
+}
+.error-404 .m-t-20 {
+  margin-top: 20px!important;
+}
+
+</style>
+<div class="error-404">
+    <div class="error-code m-b-10 m-t-20">No Product Found !!<i class="fa fa-warning"></i></div>
+    <h2 class="font-bold"></h2>
+
+    <div class="error-desc">
+      <ul>
+        <li>Either your search didn't matched any available products, try to be more specific </li>
+        <li>If your search query was valid, Sorry for the inconvenience, either the product you searched for was not available on all of the three websites or your internet connection was broken! So try again later !!</li>
+      </ul> 
+        <div><br/>
+            <!-- <a class=" login-detail-panel-button btn" href="http://vultus.de/"> -->
+            <a href="/" class="btn btn-primary"><span class="glyphicon glyphicon-home"></span> Go back to Homepage</a>
+        </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer.ejs')%>

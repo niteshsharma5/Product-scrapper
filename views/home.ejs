@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs')%>
+<%- include('partials/messages.ejs') %>
+<script>
+	document.getElementById("feedback").style.visibility = "hidden";
+	</script>
+<style>
+	.mem{
+		margin:1%;
+		padding:1%;
+		display:flex;
+		justify-content:center;
+	}
+</style>
+<div style="background-color:#bbe1fa;margin-top:6%;margin-left:5%;padding-top:7%;padding-bottom:7%;width:90%">
+	<h1 style="font-family: 'Permanent Marker', cursive;text-align: center;padding-bottom:1%"><u>STORY TIME!</u></h1>
+<p class="mem" style="font-family: 'Montserrat', sans-serif;text-align:center;line-height:2rem ;">
+	Wish to buy a new mobile, new watch, or may be a new earphone or anyting else but don't know about the best deals available in market. Ok no problem even I don't know where to buy a new Apple Iphone XR from but no worries because my application knows. Actually, you know what, this whole idea of developing a website emerged with a small incident 2 months back, when I bought a philips BT trimmer from amazon and it costed me Rs.849. Next day, one of my friend told me that hey bro!, you wasted Rs.100 more for this because you might have got the same product for Rs.749 on flipkart and when I enquired for the same, it was correct. I felt really sad for the same but then I thought that why should someone else run into a similar kind of problem. So me Nitesh along with my friend Abhinav thought of developing something that will give you the current rates of any product that you might be looking for from 3 top sellers(Amazon, flipkart and snapdeal) so that you can select the cheapest one fulfilling your requirements offered by these three.
+</p>
+<div style="text-align:center;">
+ <h3 style="color:black;font-family: 'Permanent Marker', cursive;text-align:center">Give it a try</h3>
+ <i class="fas fa-long-arrow-alt-down fa-2x" style="color:black"></i>
+ <div style="padding-left:41%;">
+<form action="/search" class="form-inline my-2 my-lg-0" method="POST">
+	<input
+		class="form-control mr-sm-2"
+		type="search"
+		name="query"
+		placeholder="Search"
+		aria-label="Search"
+	/>
+	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+		Search
+	</button>
+</form>
+</div>
+</div>
+	</div>
+	
+<%- include('partials/footer.ejs')%>
